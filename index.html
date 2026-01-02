@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Todo List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- THEME TOGGLE -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="emoji">📝</div>
+
+      <div class="stat-item">
+        <div id="totalTasks" class="stat-number">0</div>
+        Total
+      </div>
+
+      <div class="stat-item">
+        <div id="completedTasks" class="stat-number">0</div>
+        Completed
+      </div>
+
+      <div class="stat-item">
+        <div id="pendingTasks" class="stat-number">0</div>
+        Pending
+      </div>
+
+      <!-- ✅ ONLY ONE CIRCLE (UNDER PENDING) -->
+      <div class="circle-wrapper">
+        <svg width="120" height="120" class="progress-ring">
+          <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+          <circle class="ring-progress" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="circle-text" id="progressPercent">0%</div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <h1 align="center">🚀 My Todo List</h1>
+
+      <div class="input-group">
+        <input id="categoryInput" placeholder="Category">
+      </div>
+
+      <div class="input-group">
+        <input id="taskInput" placeholder="Task name">
+        <input id="startDate" type="date">
+        <input id="endDate" type="date">
+        <select id="priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+        <button class="btn btn-primary" onclick="addTask()">+ Task</button>
+      </div>
+
+      <div id="tasksContainer"></div>
+    </div>
+  </div>
+
+  <!-- CALENDAR POPUP -->
+<div id="calendarPopup" class="hidden">
+  <div class="calendar-header">
+    <button onclick="changeMonth(-1)">◀</button>
+    <div id="calendarTitle">Month Year</div>
+    <button onclick="changeMonth(1)">▶</button>
+  </div>
+
+  <div id="calendarGrid"></div>
+
+  <button class="calendar-close" onclick="closeCalendar()">Close Calendar</button>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
