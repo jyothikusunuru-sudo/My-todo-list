@@ -48,5 +48,46 @@ CSS3 – Styling & layout
 JavaScript (Vanilla JS) – Logic & interactivity
 
 LocalStorage API – Persistent data storage
+📂 Project Structure
+My-Todo-List/
+│
+├── index.html     # Main HTML file
+├── style.css      # Styling and layout
+├── script.js      # Application logic
+└── README.md      # Project documentation
+⚙️ How to Run the Project
 
+Download or clone the repository
+git clone https://github.com/your-username/my-todo-list.git
+Open the project folder
+
+Double-click index.html
+✅ That’s it! No server or installation required.
+
+📸 Screens & UI Highlights
+
+Sidebar with stats and progress ring
+
+Category cards with collapsible tasks
+
+Calendar popup for date-wise task tracking
+
+Smooth UI with gradients and rounded cards
+
+🔮 Future Improvements
+
+Search and filter tasks
+
+Notifications / reminders
+
+User authentication
+
+Cloud database integration
+
+Mobile-first enhancements
+
+👤 Author
+
+Jyothi Kusunuru
+Beginner-friendly project built to practice JavaScript logic, DOM manipulation, and UI design.
 
